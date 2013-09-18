@@ -22,3 +22,10 @@ In rails console:
     user.apps.first.role
     => #<Role id: 4, description: "admin", created_at: "2013-09-18 20:12:31", updated_at: "2013-09-18 20:12:31">
 
+Specs
+-----
+
+It works, dammit :)
+
+    rspec spec/
+    
