@@ -9,6 +9,8 @@ describe User do
   let(:user) { User.create }
   let(:app_1) { App.create(:description => 'BBEdit') }
   let(:app_2) { App.create(:description => 'Sublime')}
+  let(:prop_type_1) { PropertyKeyType.create(:description => 'Management Company')}
+  let(:prop_type_2) { PropertyKeyType.create(:description => 'Individual Property')}
 
   describe "relations" do
 
@@ -42,6 +44,7 @@ describe User do
       end
 
     end
+
 
   end
 
