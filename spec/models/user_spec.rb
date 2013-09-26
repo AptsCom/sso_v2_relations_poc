@@ -45,6 +45,28 @@ describe User do
 
     end
 
+    describe "properties" do
+
+      it 'has many' do
+        user_app_property_1 = UserAppProperty.new
+        user_app_property_1.app_id = 1
+        user_app_property_1.user_id = 1
+        user_app_property_1.property_key_type_id = 1
+        user_app_property_1.property_key = 123456
+        user_app_property_1.save!
+
+        user_app_property_2 = UserAppProperty.new
+        user_app_property_2.app_id = 1
+        user_app_property_2.user_id = 1
+        user_app_property_2.property_key_type_id = 2
+        user_app_property_2.property_key = 1357
+        user_app_property_2.save!
+
+        user.user_app_properties.first.property_key.should == 123456
+        user.user_app_properties.last.property_key.should == 1357
+      end
+
+    end
 
   end
 
